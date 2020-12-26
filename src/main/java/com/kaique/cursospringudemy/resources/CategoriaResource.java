@@ -21,7 +21,8 @@ public class CategoriaResource {
 	public ResponseEntity<?> encontrarPorId(@PathVariable Integer id) {
 		Categoria obj = service.buscarPorID(id);
 		
-		return obj != null ? ResponseEntity.ok().body(obj): ResponseEntity.notFound().build();
+		//return obj != null ? ResponseEntity.ok(obj): ResponseEntity.notFound().build();
+		return ResponseEntity.ok(obj);
 	}
 	
 }

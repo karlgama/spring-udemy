@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import com.kaique.cursospringudemy.domain.Categoria;
 import com.kaique.cursospringudemy.repositories.CategoriaRepository;
+import com.kaique.cursospringudemy.services.exceptions.ObjectNotFoundException;
 
 @Service
 public class CategoriaService {
@@ -13,6 +14,9 @@ public class CategoriaService {
 	private CategoriaRepository repo;
 	
 	public Categoria buscarPorID(Integer id) {
-		return repo.findById(id).orElse(null);
+		return repo.findById(id).orElseThrow(() -> 
+		new ObjectNotFoundException("Objeto não encontrado" 
+									+" id:" + id + " Tipo:" + Categoria.class.getName()
+				));
 	}
 }
