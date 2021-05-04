@@ -1,7 +1,10 @@
 package com.kaique.cursospringudemy.domain;
 
+import javax.persistence.Entity;
+
 import com.kaique.cursospringudemy.domain.enums.EstadoPagamento;
 
+@Entity
 public class PagamentoCartao extends Pagamento{
 	private static final long serialVersionUID = 1L;
 	

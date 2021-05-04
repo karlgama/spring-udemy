@@ -31,6 +31,7 @@ public class Cliente implements Serializable {
 	@SuppressWarnings("unused")
 	private Integer tipo;
 	
+	@OneToMany(mappedBy = "cliente")
 	private List<Pedido> pedidos = new ArrayList<>();
 	
 	@JsonManagedReference

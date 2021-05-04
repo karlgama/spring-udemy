@@ -2,8 +2,11 @@ package com.kaique.cursospringudemy.domain;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+
 import com.kaique.cursospringudemy.domain.enums.EstadoPagamento;
 
+@Entity
 public class PagamentoBoleto extends Pagamento{
 	private static final long serialVersionUID = 1L;
 	
